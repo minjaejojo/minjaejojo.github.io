@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Minjae Jo</title>
+<meta name="description" content="Minjae Jo studies how we build and use memory in the real world." />
+
+<link rel="preload" href="./fonts/calluna-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/baron-neue-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Minjae Jo</h1>
+    <p class="role">Studying memory in the real world</p>
+
+    <div class="hero">
+      <div class="bio">
+        <p>I am an MS candidate in the Department of Biomedical Engineering at Sungkyunkwan University, and <a href="https://cnir.ibs.re.kr/" target="_blank" rel="noopener noreferrer">Center for Neuroscience Imaging Research</a>, advised by <a href='https://sites.google.com/view/vcnlskku/vcnl-lab?authuser=0' target="_blank" rel="noopener noreferrer">Min-Suk Kang</a> and <a href='https://combinelab.net' target="_blank" rel="noopener noreferrer">Seok-Jun Hong</a>.</p>
+        <p>I study how the brain builds maps of the places it has been, and how those maps are used to plan where to go next. My work combines fMRI, virtual navigation tasks, and reinforcement learning models to ask when memory is a static picture of space and when it is a prediction about the future.</p>
+
+        <nav class="links ui">
+          <a href="mailto:minjae.a.jo@gmail.com">Email</a>
+          <a href="https://drive.google.com/file/d/1g44RwQte-JBob7JAkdfKMh2rzP4d43xB/view?usp=sharing" target="_blank" rel="noopener noreferrer">Curriculum vitae</a>
+        </nav>
+      </div>
+
+      <figure class="portrait">
+        <img src="portrait.jpg"
+             srcset="portrait@600.jpg 600w, portrait.jpg 1200w"
+             sizes="(max-width:760px) 300px, 300px"
+             width="1200" height="1200"
+             alt="Minjae Jo" />
+      </figure>
+
+    </div>
+  </header>
+
+  <section>
+    <span class="label ui">research interests</span>
+    <div class="streams">
+
+      <article class="stream">
+        <div>
+          <h3>Memory in navigation</h3>
+          <p>I was bad with directions (still now, but keep improving since I started my master's degree) and that's the reason why I entered the field. To move through a space, you have to know where you are, and knowing where you are means locating yourself inside a structure you learned earlier. I study how that structure gets built, how it is stored, and how it is put to use when the world stops looking the way it did during learning. Three projects during my undergraduate and master's degrees approach this from different sides. <a class="inline-link" href="projects.html">Details of each are here.</a></p>
+          <p>Two questions drive future work. The first is <strong>how navigation works outside the laboratory</strong>. So far I have studied it in the scanner, where the participant lies still and the world moves on a screen. Real navigation is not like that. You turn, you accelerate, you feel the floor under you, and those self-motion signals are exactly what a virtual paradigm strips away and hands to the experimenter. I want to know whether the memory and planning we measure under laboratory conditions are the same processes operating in a richer world, or only the part of them that survives simplification.</p>
+          <p>The second is <strong>how goal-directed behavior is organized</strong>. When you navigate toward a goal, the scene on your retina is continuous but it is rarely the scene you are thinking about. You are picturing the turn ahead, a landmark you cannot yet see, or a route you took last week. The brain has to hold two things apart at once, the input arriving now and the content being used to decide what happens next. I want to understand how goal-directed behavior is supported at the neural level when the representation driving it is not the one being perceived, and how the two are kept from interfering with each other.</p>
+        </div>
+      </article>
+
+      <article class="stream">
+        <div>
+          <h3>How to coexist with the new species &mdash; AI</h3>
+          <p>What makes us unique as humans? Humanity has built something close to a new species, Artificial Intelligence, and the pace of that building is faster than our understanding of it. Thus, I seriously think about how these two systems actually work, which makes this moment interesting at the same time. We now have the second system that learns from experiences, generalizes, and gets things wrong in ways that we can inspect line by line.</p>
+          <p>Inspired by the navigation research I do, I am especially curious about <strong>how we select the past experiences that seem to fit the current moment</strong>. This selection problem goes beyond the usual cognitive mapping question, which asks how people generalize a recently learned structure on the fly. Selecting means picking one structure, schema, or past experience out of many. It also broadens what prediction means in the mind, and the reverse is true as well, because prediction is how a vague sense of <em>where am I</em> becomes a definite one.</p>
+          <p>How does that work, and why does it work that way? I think this problem connects to other models and theories of memory, and <span class="accent">my dream is to build a theory of it one day!</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="ui">
+    <span><a href="mailto:minjae.a.jo@gmail.com">minjae.a.jo@gmail.com</a></span>
+  </footer>
+
+</div>
+
+</body>
+</html>

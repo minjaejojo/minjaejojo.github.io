@@ -1,0 +1,243 @@
+  /* ---------- self-hosted type ---------- */
+  @font-face{
+    font-family:"Calluna Sans";
+    src:url("./fonts/calluna-sans-regular.woff2") format("woff2");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Calluna Sans";
+    src:url("./fonts/calluna-sans-italic.woff2") format("woff2");
+    font-weight:400; font-style:italic; font-display:swap;
+  }
+  @font-face{
+    font-family:"Calluna Sans";
+    src:url("./fonts/calluna-sans-bold.woff2") format("woff2");
+    font-weight:700; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Baron Neue";
+    src:url("./fonts/baron-neue-regular.woff2") format("woff2");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Baron Neue";
+    src:url("./fonts/baron-neue-bold.woff2") format("woff2");
+    font-weight:700; font-style:normal; font-display:swap;
+  }
+
+  :root{
+    --font-display:"Baron Neue","Helvetica Neue",Arial,sans-serif;
+    --font-body:"Calluna Sans","Helvetica Neue",Arial,sans-serif;
+    --font-math:Georgia,"Times New Roman",serif; /* Greek gamma is not in either face */
+
+    --paper:#FFF8DE;
+    --ink:#17191C;
+    --ink-soft:#17191C;   /* was a soft grey; all body text is black now */
+    --rule:#DCDCD5;
+    --heat:#2F5D8C;      /* successor-representation heat */
+    --accent:#2F5D8C;
+    --accent-alt:#FF4400;
+    --pending:#134E8E;
+    --maxw:52rem;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;font-size:clamp(17px, 0.7rem + 0.6vw, 21px)}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:1.25rem;
+    line-height:1.66;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:min(100%, 1440px);margin:0 auto;padding:0 clamp(20px, 3.5vw, 64px)}
+
+  /* ---------- utility type (labels, links, data) ---------- */
+  .ui{
+    font-family:var(--font-display);
+    font-weight:400;
+    font-size:0.75rem;
+    letter-spacing:.17em;
+  }
+  .label{
+    color:var(--ink-soft);
+    display:block;
+    margin-bottom:22px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--rule);
+    font-size:0.9375rem;
+  }
+  .math{font-family:var(--font-math);font-style:italic;letter-spacing:0;font-size:0.875rem}
+
+  a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+  a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  /* ---------- header ---------- */
+  header{padding:clamp(56px, 8vw, 96px) 0 0}
+  h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(2.375rem,6.4vw,4rem);
+    letter-spacing:.05em;
+    margin:0 0 8px;
+    line-height:1.02;
+  }
+  .role{
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  /* ---------- hero: bio + portrait ---------- */
+  .hero{
+    display:grid;
+    grid-template-columns:1fr clamp(240px, 19vw, 420px);
+    gap:clamp(32px, 5vw, 60px);
+    align-items:start;
+    padding-bottom:clamp(48px, 7vw, 80px);
+  }
+  .portrait{margin:0}
+  .portrait img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--rule);
+  }
+  .bio p{margin:0 0 18px}
+  .bio p:last-child{margin-bottom:0}
+
+  .links{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .links a{border-bottom:1px solid var(--rule);color:var(--ink)}
+  .links a:hover{color:var(--accent)}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(40px, 5vw, 60px) 0;border-top:1px solid var(--rule)}
+  h2{margin:0}
+  .rows{display:grid;gap:28px}
+  .row{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:baseline}
+  .row .when{color:var(--ink-soft);padding-top:5px}
+  .row h3{
+    margin:0 0 4px;
+    font-size:1.375rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+  .row p{margin:0;color:var(--ink-soft);font-size:1.0625rem}
+  .venue{font-style:italic}
+
+  /* ---------- research streams (longer prose than a .row) ---------- */
+  .streams{display:grid;gap:46px}
+  .stream{display:block}
+  .stream h3{margin:0 0 12px;font-size:1.375rem;font-weight:700;line-height:1.45}
+  .stream p{margin:0 0 14px;color:var(--ink);font-size:1.0625rem}
+  .stream .sub{
+    margin:24px 0 10px;
+    color:var(--ink);
+    font-family:var(--font-display);
+    font-weight:400;
+    font-size:0.8125rem;
+    letter-spacing:.16em;
+  }
+  .more{
+    display:inline-block;
+    margin-top:6px;
+    border-bottom:none;
+    color:var(--ink-soft);
+    font-family:var(--font-display);
+    font-size:0.75rem;
+    letter-spacing:.17em;
+  }
+  .more:hover{color:var(--accent)}
+  .more::before{content:"→ ";font-family:var(--font-body);opacity:.5}
+
+  footer{
+    padding:44px 0 72px;
+    border-top:1px solid var(--rule);
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .portrait{max-width:300px}
+    .row{grid-template-columns:1fr;gap:6px}
+    .row .when{padding-top:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important}
+  }
+
+/* ---------- sub-page chrome ---------- */
+.back{
+  display:inline-block;
+  margin-bottom:26px;
+  border-bottom:none;
+  color:var(--ink-soft);
+  font-family:var(--font-display);
+  font-size:1.0625rem;
+  letter-spacing:.17em;
+}
+.back:hover{color:var(--accent)}
+.page-head{padding:56px 0 8px}
+.page-head h1{font-size:clamp(1.875rem,4.6vw,2.75rem)}
+.lede{color:var(--ink-soft);margin:0 0 8px}
+.entry{display:block;margin-bottom:44px}
+.entry h3{margin:0 0 12px;font-size:1.375rem;font-weight:700;line-height:1.45}
+.entry p{margin:0 0 14px;color:var(--ink-soft);font-size:1.0625rem}
+.entry p:last-child{margin-bottom:0}
+.entry:last-child{margin-bottom:0}
+.todo{
+  border-left:2px solid var(--rule);
+  padding-left:16px;
+  font-style:italic;
+  color:var(--ink-soft);
+}
+
+/* ---------- placeholder for pages that do not exist yet ---------- */
+.pending{
+  color:var(--pending);
+  border-bottom:1px dotted currentColor;
+}
+.accent{color:var(--accent-alt);font-weight:700}
+
+/* ---------- project figures ---------- */
+.fig{margin:22px auto 0;max-width:min(100%, clamp(280px, 50vw, 1200px))}
+.fig img{
+  width:100%;
+  height:auto;
+  max-width:100%;
+  display:block;
+  border:1px solid var(--rule);
+  background:#fff;
+}
+.fig figcaption{
+  margin-top:10px;
+  color:var(--ink-soft);
+  font-size:0.9375rem;
+  line-height:1.55;
+}
+.fig-slot{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:5 / 2;
+  border:1px dashed var(--rule);
+  color:var(--ink-soft);
+  font-family:var(--font-display);
+  font-size:0.75rem;
+  letter-spacing:.17em;
+}
+/* inline link that keeps the placeholder blue */
+.inline-link{color:var(--pending);border-bottom:1px solid currentColor}
+.inline-link:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ---------- citation line under a project description ---------- */
+.cite{margin:16px 0 0;font-size:0.9375rem}
