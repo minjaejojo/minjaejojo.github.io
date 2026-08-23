@@ -110,7 +110,7 @@
   .bio p{margin:0 0 18px}
   .bio p:last-child{margin-bottom:0}
 
-  .links{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .links{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 24px;font-size:1rem}
   .links a{border-bottom:1px solid var(--rule);color:var(--ink)}
   .links a:hover{color:var(--accent)}
 
@@ -207,6 +207,7 @@
   border-bottom:1px dotted currentColor;
 }
 .accent{color:var(--accent-alt);font-weight:700}
+.stream strong{color:var(--accent-alt);font-weight:400}
 
 /* ---------- project figures ---------- */
 .fig{margin:22px auto 0;max-width:min(100%, clamp(280px, 50vw, 1200px))}
